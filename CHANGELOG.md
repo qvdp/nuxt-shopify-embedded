@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.1.1
+
 ## v0.1.0
 
 _Release date: 2026-01-28_
