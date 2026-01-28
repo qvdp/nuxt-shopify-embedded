@@ -46,9 +46,6 @@ export default defineNuxtConfig({
     apiSecret: process.env.SHOPIFY_API_SECRET,
     appUrl: process.env.SHOPIFY_APP_URL,
     scopes: process.env.SHOPIFY_APP_SCOPES,
-    // Optional
-    appProxySecret: process.env.SHOPIFY_APP_PROXY_SECRET,
-    appHandle: process.env.SHOPIFY_APP_HANDLE,
   },
 })
 ```
@@ -152,7 +149,6 @@ console.log(config.public.shopifyEmbedded.appUrl)
 // Server-side (all values including secrets)
 const config = useRuntimeConfig()
 console.log(config.shopifyEmbedded.apiSecret)
-console.log(config.shopifyEmbedded.appProxySecret)
 ```
 
 ## Configuration
@@ -163,8 +159,6 @@ console.log(config.shopifyEmbedded.appProxySecret)
 | `apiSecret` | `string` | ✅ | Your Shopify app's API secret |
 | `appUrl` | `string` | ✅ | Your app's public URL |
 | `scopes` | `string` | ✅ | Comma-separated OAuth scopes |
-| `appProxySecret` | `string` | ❌ | Secret for app proxy signature validation |
-| `appHandle` | `string` | ❌ | Your app's handle from the Partner Dashboard |
 
 ## TypeScript
 
@@ -210,6 +204,28 @@ pnpm lint
 pnpm test:types
 ```
 
+### Running the playground with Shopify CLI
+
+The playground is a working Shopify embedded app. To run it against a real Shopify store, you need the [Shopify CLI](https://shopify.dev/docs/api/shopify-cli#installation) installed globally:
+
+```bash
+npm install -g @shopify/cli @shopify/theme
+```
+
+Then link your Shopify app configuration to the project:
+
+```bash
+shopify app config link
+```
+
+This creates the required `.toml` configuration files at the root of the project. Once linked, start the playground with:
+
+```bash
+pnpm dev:shopify
+```
+
+This runs `shopify app dev` inside the playground directory, which handles the OAuth tunnel and embeds your app in the Shopify admin.
+
 ## Contributing
 
 Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTING.md) before submitting a PR.
@@ -219,15 +235,6 @@ Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTIN
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## Roadmap
-
-- [ ] OAuth flow utilities
-- [ ] Session management helpers
-- [ ] Webhook verification utilities
-- [ ] App proxy utilities
-- [ ] Billing API helpers
-- [ ] CLI scaffolding tool
 
 ## License
 

@@ -11,8 +11,6 @@ export interface ModuleOptions {
   apiSecret: string
   appUrl: string
   scopes: string
-  appProxySecret?: string
-  appHandle?: string
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -26,8 +24,6 @@ export default defineNuxtModule<ModuleOptions>({
     apiSecret: '',
     appUrl: '',
     scopes: '',
-    appProxySecret: '',
-    appHandle: '',
   },
   setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
@@ -49,8 +45,6 @@ export default defineNuxtModule<ModuleOptions>({
         apiSecret: options.apiSecret,
         appUrl: options.appUrl,
         scopes: options.scopes,
-        appProxySecret: options.appProxySecret || '',
-        appHandle: options.appHandle || '',
       },
       public: {
         shopifyEmbedded: {

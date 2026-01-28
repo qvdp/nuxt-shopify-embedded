@@ -53,7 +53,7 @@ The module registers under the `shopifyEmbedded` config key with Nuxt 4 compatib
 
 ### Playground (`playground/`)
 
-A working Shopify embedded app that serves as both a development environment and usage example. Configure via environment variables: `SHOPIFY_API_KEY`, `SHOPIFY_API_SECRET`, `SHOPIFY_APP_URL`, `SHOPIFY_APP_SCOPES`, `SHOPIFY_APP_PROXY_SECRET`, `SHOPIFY_APP_HANDLE`.
+A working Shopify embedded app that serves as both a development environment and usage example. Configure via environment variables: `SHOPIFY_API_KEY`, `SHOPIFY_API_SECRET`, `SHOPIFY_APP_URL`, `SHOPIFY_APP_SCOPES`. Requires Shopify CLI installed globally and `shopify app config link` run at the project root to generate `.toml` files.
 
 ### Test Structure
 
