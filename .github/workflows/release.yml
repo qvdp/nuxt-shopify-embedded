@@ -1,4 +1,4 @@
-name: release
+name: Release
 
 on:
   workflow_dispatch:
@@ -48,6 +48,9 @@ jobs:
 
       - name: Push commit and tag
         run: git push --follow-tags
+
+      - name: Prepare module
+        run: pnpm dev:prepare
 
       - name: Build module
         run: pnpm prepack
