@@ -1,0 +1,7 @@
+roles = ["frontend", "backend"]
+webhooks_path = "/api/webhooks/app/uninstalled"
+port = 8080
+
+[commands]
+dev = "pnpm dev"
+build = "pnpm devapp:build"

@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      nuxt:
+        patterns:
+          - "@nuxt/*"
+          - "nuxt"
+      shopify:
+        patterns:
+          - "@shopify/*"
+      dev:
+        dependency-type: development
+        exclude-patterns:
+          - "@nuxt/*"
+          - "nuxt"
+          - "@shopify/*"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
