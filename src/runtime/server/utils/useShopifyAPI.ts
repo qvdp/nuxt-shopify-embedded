@@ -6,9 +6,11 @@ if (!nodeAdapterInitialized) {
   throw new Error('Node adapter not initialized')
 }
 
-let shopifyApiInstance: ReturnType<typeof shopifyApi> | null = null
+type ShopifyApiInstance = ReturnType<typeof shopifyApi>
 
-export function useShopifyAPI() {
+let shopifyApiInstance: ShopifyApiInstance | null = null
+
+export function useShopifyAPI(): ShopifyApiInstance {
   if (shopifyApiInstance) {
     return shopifyApiInstance
   }
