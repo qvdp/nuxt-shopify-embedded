@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.1.2
+
+[compare changes](https://github.com/qvdp/nuxt-shopify-embedded/compare/v0.1.1...v0.1.2)
+
 ## v0.1.1
 
 ## v0.1.0
