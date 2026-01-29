@@ -25,11 +25,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qvdp/nuxt-shopify-embedded.git"
+    "url": "git+https://github.com/shopiedge/nuxt-shopify-embedded.git"
   },
-  "homepage": "https://github.com/qvdp/nuxt-shopify-embedded#readme",
+  "homepage": "https://github.com/shopiedge/nuxt-shopify-embedded#readme",
   "bugs": {
-    "url": "https://github.com/qvdp/nuxt-shopify-embedded/issues"
+    "url": "https://github.com/shopiedge/nuxt-shopify-embedded/issues"
   },
   "keywords": [
     "nuxt",
