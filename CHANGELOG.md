@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## v0.1.8
+
+[compare changes](https://github.com/shopiedge/nuxt-shopify-embedded/compare/v0.1.7...v0.1.8)
+
+### 🏡 Chore
+
+- **deps-dev:** Bump @types/node from 25.1.0 to 25.2.0 in the dev group ([#3](https://github.com/shopiedge/nuxt-shopify-embedded/pull/3))
+- **deps-dev:** Bump @shopify/app-bridge-types in the shopify group ([#2](https://github.com/shopiedge/nuxt-shopify-embedded/pull/2))
+
 ## v0.1.7
 
 [compare changes](https://github.com/shopiedge/nuxt-shopify-embedded/compare/v0.1.6...v0.1.7)
